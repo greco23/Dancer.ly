@@ -1,0 +1,35 @@
+:root {
+
+/* Colores */
+
+    --color-base: #ffffff;
+    --color-text: #000000;
+    --color-text-muted: #3f3f3f;
+    --color-border: #c5c5c5;
+    --color-second: #00488A;
+
+/* Fuentes */
+
+    --font-primary: "Montserrat", sans-serif;
+    --font-nav: "Inter", sans-serif;
+
+    --weight-bold: ;
+    --weight-normal: 500;
+
+/* Bordes */
+    --radius-sm: ;
+    --radius-md: ;
+    --radius-full: ;
+
+/* Tamaños */
+
+    --text-xxs: 12px;
+    --text-xs: 14px;
+    --text-s: 15px;
+    --text-m: 20px;
+    --text-l: 25px;
+    --text-xl: 50px;
+    
+
+
+}
