@@ -33,8 +33,8 @@
                 <p class="hero__subtitle">Todos tus proyectos al alcance de tu mano</p>
             </div>
             <div class="hero__links">
-                <button class="hero__link hero__link--primary" type="button">Empezar</button>
-                <button class="hero__link hero__link--secondary" type="button">Tengo un código</button>
+                <button id="hero-start"  class="hero__link hero__link--primary" type="button">Empezar</button>
+                <button id="hero-code" class="hero__link hero__link--secondary" type="button">Tengo un código</button>
             </div>
         </section>
     </main>
@@ -46,22 +46,22 @@
     </footer>
     <div class="modal-overlay" id="modal-login">
         <div class="modal">
-            <button type="button" id="modal-close" class="modal__close" aria-label="Cerrar modal">✕</button>
+            <button type="button" id="modal-close-login" class="modal__close" aria-label="Cerrar modal">✕</button>
             <h2 class="modal__title">Ingresar</h2>                
-            <form action="" class="modal__form">
-                <label for="email">Correo Electronico</label>
+            <form id="form_login" class="modal__form">
+                <label for="email-login">Correo Electronico</label>
                 <input 
                     type="email" 
-                    id="email" 
+                    id="email-login" 
                     name="email"
                     placeholder="xxxx@example.com"
                     autocomplete="email"
                     required
                 >
-                <label for="password">Contraseña</label>
+                <label for="password-login">Contraseña</label>
                 <input 
                     type="password" 
-                    id="password" 
+                    id="password-login"
                     name="password"
                     placeholder="*********"
                     autocomplete="current-password"
@@ -81,24 +81,51 @@
     </div>
     <div class="modal-overlay" id="modal-register">
         <div class="modal">
-            <button type="button" id="modal-close" class="modal__close" aria-label="Cerrar modal" >✕</button>
+            <button type="button" id="modal-close-register" class="modal__close" aria-label="Cerrar modal">✕</button>
             <h2 class="modal__title">Registrarse</h2>                
-            <form action="" class="modal__form">
-                <label for="email">Correo Electronico</label>
+            <form  id="form_register" class="modal__form">
+                <div class="form__info">
+                <div class="form__side">
+                    <label for="nombre-register">Nombre</label>
+                <input 
+                    type="text"
+                    id="nombre-register"
+                    name="nombre"
+                    autocomplete="given-name"
+                    required
+                >
+                <label for="apellido-register">Apellido</label>
+                <input 
+                    type="text"
+                    id="apellido-register"
+                    name="apellido"
+                    autocomplete="family-name"
+                    required
+                >
+                <label for="fecha-nacimiento-register">Fecha de Nacimiento</label>
+                <input 
+                    type="date"
+                    id="date-register"
+                    name="nacimiento"
+                    autocomplete="bday"
+                    placeholder=" "
+                    required
+                >
+                </div>
+                <div class="form__side">
+                <label for="email-register">Correo Electronico</label>
                 <input 
                     type="email"
-                    id="email" 
+                    id="email-register"
                     name="email"
-                    placeholder="xxxx@example.com"
                     autocomplete="email"
                     required
                 >
-                <label for="password">Contraseña</label>
+                <label for="password-register">Contraseña</label>
                 <input 
                     type="password" 
-                    id="password" 
+                    id="password-register"
                     name="password"
-                    placeholder="*********"
                     autocomplete="new-password"
                     required
                 >
@@ -107,13 +134,15 @@
                     type="password" 
                     id="repetir-contraseña"
                     name="repeat-password" 
-                    placeholder="*********"
-                    required>
-                <button class="form__submit" type="submit"  >Crear cuenta</button>
+                    required
+                >                  
+                </div>
+                </div>
+                <button class="form__submit" type="submit">Crear cuenta</button>
             </form>
             <p class="modal__divider">o</p>
             <button type="button" class="modal__continue"><img src="assets/search.png" alt="">Continuar con Google</button>
-            <a class="modal__registered--link" href="#" id="alreadyLogged">Ya tengo una cuenta</a>
+            <a class=" modal__registered modal__registered--link" href="#" id="alreadyLogged">Ya tengo una cuenta</a>
             <p class="modal__legal">Al registrate, estás aceptando nuestros <br> Términos y Condiciones y nuestra política<br> sobre Protección de Datos
             </p>
         </div>

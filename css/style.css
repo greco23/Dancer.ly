@@ -269,11 +269,25 @@ body{
 .modal__form{
     display: flex;
     flex-direction: column;
-    width: 100%;
     gap: 10px;
+    width: 100%;
     }
 
+.form__info{
+    display: flex;
+    gap: 10px;
+
+}
+
+.form__side{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    gap: 10px;
+}
+
 .form__submit{
+    width: 100%;
     border-radius: 30px;
     padding: 8px;
     background-color: var(--color-text);

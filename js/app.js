@@ -2,14 +2,24 @@ const register = document.querySelector("#register")
 
 const login = document.querySelector("#login")
 
-const modalRegister = document.querySelector("#modal-register")
+const start = document.querySelector("#hero-start")
 
+const modalRegister = document.querySelector("#modal-register")
 const modalLogin = document.querySelector("#modal-login")
 
-const modalClose = document.querySelector("#modal-close")
+const modalCloseLogin = document.querySelector("#modal-close-login")
+const modalCloseRegister = document.querySelector("#modal-close-register")
 
-const formRegister = document.querySelector("#modal-register form")
+const formRegister = document.querySelector("#form_register")
 
+
+
+
+
+start.addEventListener("click", function(e) {
+    e.preventDefault()
+    modalLogin.classList.add("active")
+})
 
 register.addEventListener("click", function(e) {
     e.preventDefault()
@@ -21,7 +31,14 @@ login.addEventListener("click", function(e) {
     modalLogin.classList.add("active")
 })
 
-modalClose.addEventListener("click", function(e) {
+/* cERRAR MODAL CON LA "X"*/
+
+modalCloseLogin.addEventListener("click", function(e) {
+    e.preventDefault()
+    modalLogin.classList.remove("active")
+})
+
+modalCloseRegister.addEventListener("click", function(e) {
     e.preventDefault()
     modalRegister.classList.remove("active")
 })
@@ -29,7 +46,17 @@ modalClose.addEventListener("click", function(e) {
 /* ENVIAR FORM */
 
 formRegister.addEventListener("submit", function(e) {
-    e.preventDefault()
+           e.preventDefault()
+           const userName = document.querySelector("#nombre-register").value
+           const userLastname = document.querySelector("#apellido-register").value
+           const userBday = document.querySelector("#fecha-nacimiento-register").value
+           const userEmail = document.querySelector("#email-register").value
+           const userPassword = document.querySelector("#password-register").value
+           
+          const profileData = { name: userName, lastName: userLastname, birthDate: userBday, email : userEmail , password : userPassword}
+        
+           const profileInfo = JSON.stringify(profileData)
+           localStorage.setItem("perfil", perfilInfo)
     window.location.href = "pages/proyectos.html"
 })
 
