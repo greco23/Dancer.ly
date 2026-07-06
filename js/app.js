@@ -31,7 +31,7 @@ login.addEventListener("click", function(e) {
     modalLogin.classList.add("active")
 })
 
-/* cERRAR MODAL CON LA "X"*/
+/* CERRAR MODAL CON LA "X"*/
 
 modalCloseLogin.addEventListener("click", function(e) {
     e.preventDefault()

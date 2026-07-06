@@ -143,6 +143,48 @@ body{
     font-size: var(--text-xl);
 }
 
+.projects-toolbar{
+    width: 100%;
+    padding: 0px 80px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.projects-toolbar__filters{
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    font-size: var(--text-s);
+}
+
+
+.projects-toolbar__filter{
+    padding: 10px 20px;
+    font-family: var(--font-nav);
+    background-color: var(--color-base);
+    border-style: solid;
+    border-color: var(--color-border);
+    border-radius: 25px;
+    appearance: none;
+}
+
+input[type="checkbox"] {
+    accent-color: var(--color-text-muted);
+}
+
+.projects-toolbar__new{
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: var(--text-s);
+    border-radius: 25px;
+    border-style: solid;
+    background-color: var(--color-text);
+    color: var(--color-base);
+    border-color: var(--color-text);
+}
+
+
+
 .projects-grid{
     padding: 0px 120px;
     display: grid;

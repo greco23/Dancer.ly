@@ -29,6 +29,27 @@
         <main class="main">
             <section class="projects">
                 <h1 class="project__title">Mis Proyectos</h1>
+                <div class="projects-toolbar">         
+                    <div class="projects-toolbar__filters">  
+                        <select class="projects-toolbar__filter" name="discipline" id="discipline-filter">
+                            <option value="">Todas las disciplinas</option>
+                            <option value="hip-hop">Hip Hop</option>
+                            <option value="jazz">Jazz</option>
+                            <option value="contemporaneo">Contemporáneo</option>  
+                        </select>
+                        <select class="projects-toolbar__filter" name="sort" id="sort-filter">
+                            <option value="name-ascending">Nombre A-Z</option>
+                            <option value="name-descending">Nombre Z-A</option> 
+                            <option value="date-descending">Fecha mas nueva</option>
+                            <option value="date-ascending">Fecha mas antigua</option>
+                        </select>
+                        <label class="projects-toolbar__checkbox">
+                            <input type="checkbox" id="by-me-filters" name="by-me">
+                            Hecho por mí
+                        </label>
+                    </div>
+                    <button class="projects-toolbar__new">+ Nuevo Proyecto</button>
+                </div>
                 <div class="projects-grid">
                     <a href="#" class="project-card">
                         <img src="../assets/francesco-tommasini-lxgaErpLQN8-unsplash.jpg" alt="ballet" class="project-card__image">
